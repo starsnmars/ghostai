@@ -4,7 +4,7 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Design system implementation completed
+- Editor chrome implementation completed
 
 ## Current Goal
 
@@ -19,6 +19,9 @@ Update this file whenever the current phase, active feature, or implementation s
 - All components import without errors
 - cn() works properly
 - No default light styling appears
+- Editor navbar created with sidebar toggle state and empty center/right sections
+- Project sidebar created as a floating slide-over with project tabs and new project action
+- Existing dialog primitives confirmed ready for title, description, and footer actions
 
 ## In Progress
 
@@ -26,7 +29,7 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Next Up
 
-- Add next feature
+- Build the editor canvas surface
 
 ## Open Questions
 
@@ -41,5 +44,6 @@ Update this file whenever the current phase, active feature, or implementation s
 ## Session Notes
 
 - Completed design system implementation from feature-specs/01-design-system.md
+- Completed editor chrome implementation from feature-specs/02-editor.md
 - shadcn initialized with Base UI template
 - CSS variables provide clean light/dark theme switching
