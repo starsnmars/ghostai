@@ -4,11 +4,11 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Editor chrome implementation completed
+- Auth shell fixes completed
 
 ## Current Goal
 
-- None
+- Stabilize sign-out flow and editor chrome layout
 
 ## Completed
 
@@ -36,6 +36,27 @@ Update this file whenever the current phase, active feature, or implementation s
 - Dialog pattern verified ready (shadcn/ui Dialog supports title, description, footer actions)
 - All lint errors fixed
 - Full TypeScript build successful
+- Clerk authentication feature implemented (feature-specs/03-auth.md)
+  - @clerk/ui and @clerk/themes installed
+  - proxy.ts created at root with public routes configuration (/sign-in, /sign-up)
+  - Sign-in page (app/(auth)/sign-in/page.tsx) with rich two-panel layout
+    - Left panel: Ghost AI logo (cyan box), headline "Design systems at the speed of thought", features with icons
+    - Right panel: Clerk SignIn component with cyan accent button
+    - Features: AI Architecture Generation, Real-time Collaboration, Instant Spec Generation
+  - Sign-up page (app/(auth)/sign-up/page.tsx) with identical layout and branding
+  - Root layout (app/layout.tsx) wrapped with ClerkProvider and dark theme
+  - Root page (app/page.tsx) with redirects:
+    - Authenticated users → /editor
+    - Unauthenticated users → /sign-in
+  - UserButton added to editor navbar right section with custom sizing
+  - All routes protected except /sign-in and /sign-up via proxy.ts
+  - Clerk appearance customized with cyan (#06b6d4) accent color
+  - Full TypeScript build successful, no errors
+- Editor layout and page created (app/editor/)
+  - app/editor/layout.tsx: Wraps with EditorNavbar and ProjectSidebar
+  - app/editor/page.tsx: Welcome placeholder for editor canvas
+  - Sidebar toggle state managed in layout
+  - Fixed navbar with sidebar integration
 
 ## In Progress
 
@@ -59,5 +80,9 @@ Update this file whenever the current phase, active feature, or implementation s
 
 - Completed design system implementation from feature-specs/01-design-system.md
 - Completed editor chrome implementation from feature-specs/02-editor.md
+- Completed auth feature implementation from feature-specs/03-auth.md
 - shadcn initialized with Base UI template
 - CSS variables provide clean light/dark theme switching
+- Clerk proxy.ts provides route protection at the framework level
+- Sign-in/sign-up pages use responsive two-panel layout with minimal design
+- UserButton from Clerk handles user menu and logout flow automatically

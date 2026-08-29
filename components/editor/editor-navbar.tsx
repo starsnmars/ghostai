@@ -4,6 +4,7 @@ import {
   PanelLeftClose as PaneLeftClose,
   PanelLeftOpen as PaneLeftOpen,
 } from "lucide-react"
+import { UserButton } from "@clerk/nextjs"
 
 import { Button } from "@/components/ui/button"
 
@@ -19,12 +20,13 @@ export function EditorNavbar({
   const SidebarIcon = isSidebarOpen ? PaneLeftClose : PaneLeftOpen
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-40 flex h-14 items-center border-b border-border bg-background px-3">
-      <div className="flex flex-1 items-center">
+    <nav className="fixed inset-x-0 top-0 z-40 flex h-14 items-center justify-between border-b border-[var(--border-default)] bg-[var(--bg-base)]/90 px-3 backdrop-blur-sm">
+      <div className="flex items-center gap-2">
         <Button
           aria-label={
             isSidebarOpen ? "Close projects sidebar" : "Open projects sidebar"
           }
+          className="h-9 w-9 rounded-lg border border-transparent text-[var(--text-primary)] hover:border-[var(--border-default)] hover:bg-[var(--bg-subtle)]"
           onClick={onSidebarToggle}
           size="icon"
           title={
@@ -32,11 +34,22 @@ export function EditorNavbar({
           }
           variant="ghost"
         >
-          <SidebarIcon className="h-5 w-5" />
+          <SidebarIcon className="h-4 w-4" />
         </Button>
       </div>
-      <div className="flex flex-1 justify-center" />
-      <div className="flex flex-1 justify-end" />
+
+      <div className="flex items-center gap-3">
+        <UserButton
+          appearance={{
+            elements: {
+              avatarBox: "h-8 w-8",
+              userButtonPopoverCard: "border border-[var(--border-default)] bg-[var(--bg-surface)] text-[var(--text-primary)]",
+              userButtonPopoverActionButton: "text-[var(--text-primary)] hover:bg-[var(--bg-subtle)]",
+              userButtonPopoverActionButtonText: "text-[var(--text-primary)]",
+            },
+          }}
+        />
+      </div>
     </nav>
   )
 }
