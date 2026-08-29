@@ -32,7 +32,7 @@ Requirements:
 
 ### Dialog Pattern
 
-Use the existing color tokens from 'globals.css' for diaglog styling.
+Use the existing color tokens from 'globals.css' for dialog styling.
 
 Support:
 
