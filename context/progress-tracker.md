@@ -57,6 +57,10 @@ Update this file whenever the current phase, active feature, or implementation s
   - app/editor/page.tsx: Welcome placeholder for editor canvas
   - Sidebar toggle state managed in layout
   - Fixed navbar with sidebar integration
+- Vitest and React Testing Library configured for unit testing
+  - Auth redirects and route protection covered, including failure paths
+  - Editor navbar, sidebar, layout state, and empty states covered
+  - Clerk page/provider appearance contracts covered
 
 ## In Progress
 
@@ -86,3 +90,4 @@ Update this file whenever the current phase, active feature, or implementation s
 - Clerk proxy.ts provides route protection at the framework level
 - Sign-in/sign-up pages use responsive two-panel layout with minimal design
 - UserButton from Clerk handles user menu and logout flow automatically
+- Auth and editor chrome regression suite contains 28 passing tests
