@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   description: "Collaborative design and development environment powered by AI",
 };
 
+/**
+ * Provides the application-wide document structure and authentication context.
+ *
+ * @param children - The page content rendered within the document body
+ */
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <ClerkProvider

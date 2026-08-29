@@ -4,6 +4,11 @@ import { useState } from 'react';
 import { EditorNavbar } from '@/components/editor/editor-navbar';
 import { ProjectSidebar } from '@/components/editor/project-sidebar';
 
+/**
+ * Renders the editor layout with navigation, a toggleable project sidebar, and scrollable content.
+ *
+ * @param children - Content displayed in the main editor area
+ */
 export default function EditorLayout({
   children,
 }: {

@@ -22,6 +22,9 @@ const features = [
   },
 ];
 
+/**
+ * Renders the Ghost AI account creation page with product highlights and a themed signup form.
+ */
 export default function SignUpPage() {
   return (
     <div className="min-h-screen bg-[var(--bg-base)] text-[var(--text-primary)]">
