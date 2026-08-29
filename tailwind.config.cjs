@@ -43,6 +43,6 @@ module.exports = {
       },
     },
   },
-  presets: [require('shadcn/dist/preset')],
+  presets: [require('shadcn/dist/preset')], // eslint-disable-line @typescript-eslint/no-require-imports
   plugins: [],
 };
