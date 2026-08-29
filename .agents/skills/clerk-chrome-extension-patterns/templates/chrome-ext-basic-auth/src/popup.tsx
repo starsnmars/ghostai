@@ -15,6 +15,9 @@ if (!PUBLISHABLE_KEY) {
   throw new Error('Please add the PLASMO_PUBLIC_CLERK_PUBLISHABLE_KEY to the .env.development file')
 }
 
+/**
+ * Renders the extension popup with authentication controls for signed-out and signed-in users.
+ */
 function IndexPopup() {
   return (
     <ClerkProvider

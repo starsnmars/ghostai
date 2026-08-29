@@ -15,6 +15,12 @@ interface ProjectSidebarProps {
   onClose: () => void
 }
 
+/**
+ * Renders a sidebar for browsing projects and initiating project creation.
+ *
+ * @param isOpen - Whether the sidebar is visible
+ * @param onClose - Callback invoked when the sidebar close button is clicked
+ */
 export function ProjectSidebar({ isOpen, onClose }: ProjectSidebarProps) {
   return (
     <aside

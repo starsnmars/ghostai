@@ -22,6 +22,9 @@ const features = [
   },
 ];
 
+/**
+ * Renders the responsive Ghost AI sign-in page with product highlights and a customized Clerk sign-in form.
+ */
 export default function SignInPage() {
   return (
     <div className="min-h-screen bg-[var(--bg-base)] text-[var(--text-primary)]">

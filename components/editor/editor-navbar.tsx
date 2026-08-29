@@ -13,6 +13,13 @@ interface EditorNavbarProps {
   onSidebarToggle: () => void
 }
 
+/**
+ * Renders the editor navigation bar with sidebar controls and user account actions.
+ *
+ * @param isSidebarOpen - Whether the projects sidebar is currently open
+ * @param onSidebarToggle - Handles toggling the projects sidebar
+ * @returns The editor navigation bar
+ */
 export function EditorNavbar({
   isSidebarOpen,
   onSidebarToggle,
